@@ -1,0 +1,2 @@
+cd pasta_doArquivo
+pyuic5 nome_doArquivo -o qq_nome     //converte para o python o arquivo.ui

@@ -1,0 +1,41 @@
+# comentário
+""" comentário
+
+************************************************************************************
+print ('')  #função para imprimir
+end="" #impede a quebra da linha
+sep="" #põe separador no print
+
+***************************************************************
+
+print('olaá "r" \n g dfon')
+
+**********************************************
+
+PRECEDÊNCIA
+1 - ()
+2 - **
+3 - /, *, // , %
+4 - +, -
+
+*******************************************************************
+
+print(f'{variável} asdonofisndoi {variávelfloat:.2f}')
+print('{} asdonofisndoi {:.2f}'.format(variavel, variávelfloat))
+print('{b} asdonofisndoi {a:.2f}'.format(b=variavel, a=variávelfloat))
+
+******************************************************************
+a = input('')
+a = int(input(''))
+
+**************************************************************************
+
+if 'u' not in variável:
+	asdfasdfsd
+elif 'e' in variável:
+	svdsvsd
+else:
+	vsdvsdv
+
+# operadores lógicos or, and, not, in, not in
+# Operadores relacionais ==, <, >, <=, >=, !=

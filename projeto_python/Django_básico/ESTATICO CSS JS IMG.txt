@@ -1,0 +1,38 @@
+ARQUIVOS ESTATICOS  CSS JS IMG
+
+
+pip install django   
+
+
+django-admin startproject TESTE .
+
+python manage.py startapp paginas
+
+
+/*
+ - >> vai na pasta TESTE - no arquivo settings.py na sessao INSTALLED_APPS e coloco 'paginas.apps.PaginasConfig',
+ - >> vai na pasta TESTE - no arquivo urls.py na sessão urlpatterns colocar path('', include('paginas.urls')),  e from django.urls import path, include
+ - >> criar na pasta paginas um arquivo urls.py e colocar:
+from django.urls import path
+from . import views
+urlpatterns = [
+	path('', views.index, name='index'),
+	path('sobre/', views.sobre, nome='s'),
+]
+
+ - >> na parta paginas no arquivo views colocar:
+from django.shortcuts import render
+def index(request):
+	return render(request, 'paginas/index.html')
+def sobre(request):
+	return render(request, 'paginas/sobre.html')
+
+
+ - >> na pasta paginas criar um diretorio templates criar dentro um diretorio paginas e dentro criar dois arquivos html sobre e index
+ - >> criar um diretorio fora "templates" com um arquivo html dentro "base"
+ - >> ir dentro da pasta TESTE no arquivo settings.py na sessão TEMPLATES e no item DIRS colocar: [os.path.join(BASE_DIR,'templates')],
+ - >> no arquivo base.html vai montar a estrutura html com o bootstrap  com as variaveis, as variaveis se montam desta forma   {%block variavel%} {%endblock%}
+ - >> no arquivo index.html colocar {%extends 'base.html'%}  e  {%block variavel%} <conteudo para rederizar> {%endblock%}
+ - >> para chamar outra page html com o href pode por a url ou pode colocar a sintaxe {%url 'sobre'%} {%url 'index'%} se usa name na path
+- >> tratando arquivos staticos:: criar na pasta paginas um diretorio "static" dentro criar "paginas" e dentro colocar o boots | 
+- >> colocar no arquivo arquivo base.html no topo {%load static%} nos links do boots colocar href="{% static 'url_do_boot' %}" o mesmo no link do js do bootstrap

@@ -1,0 +1,133 @@
+
+
+- > pip install django   //OU
+pip install django==2.3  //se quiser instalar uma versao específica
+
+
+- > django-admin startproject  nome_do_projeto .      //o comando cria um projeto django. o . serviu para criar apenas uma pasta do projeto OU
+django-admin startproject  nome_do_projeto 
+
+
+/*
+_init_py      >  diz que é um pacote python, vc já sabe
+settings.py   >  arquivo mais importante, pois tem todas as informações do projeto
+urls.py       >  
+wsgi.py       >  web server interface, é realacionado com servidor web.
+manage.py     >  
+*/
+
+//trabalhamos com apps no djangos, os apps não são aplicativos literalmente, são como sessões 
+
+
+- > python manage.py runserver     //ligar o localserver
+python manage.py runserver 8888    //ligar o localserver modificando a porta
+ctrl+c sai
+
+
+
+- > python manage.py startapp  nome_apps    //cria um apps
+/*
+admin.py  > registra a área administrativa do apps, ou seja, da sessão criada.
+apps.py   > deveria ser chamado de config para melhor entendimento, porém aqui se registra o nome do apps
+models.py > trabalha com a base de dados
+tests.py  > para testes automatizados
+views.py  >
+*/
+
+/*
+. ir na pasta nome_do_projeto -> ir no arquivo settings.py e registrar no installed_apps 'nome_apps.apps.nome_appsConfig', -> ir no arquivo urls.py  na lista urlpatterns e registrar path('nome_apps/', include('nome_apps.urls')), 
+. no arquivo urls.py da pasta nome_do_projeto colocar:  from django.urls import path, include
+. dentro da pasta nome_apps cria o arquivo urls.py
+. dentro da pasta nome_apps -> ir no arquivo urls.py e colocar
+from django.urls import path
+from . import views    //o . referencia a própria pasta nome_apps
+urlpatterns = [
+	path('', views.teste)
+]
+. dentro da pasta nome_apps -> ir no arquivo views.py e colocar conforme o programa exemplo
+def teste(request):
+	return render(request, 'exemplo/bla.html')
+. dentro da pasta nome_apps -> criar uma pasta templates -> criar uma pasta exemplo -> criar um arquivo bla.html
+*/
+
+
+
+
+- > python manage.py createsuperuser    //cria o usuario do admin
+
+
+
+
+
+- >> SINTAXE PARA COMUNICAÇÃO ENTRE HTML
+temos que ir na pasta nome_projeto no arquivo settings.py na sessão TEMPLATES no item 'DIRS' e colocar [os.path.join(BASE_DIR, 'paginas')],  indicará o diretório onde ficará o arquivo html universal
+
+
+{%extends 'arquivo.html'%}
+
+{%block 'variavel'%}
+<p>conteudo</p>
+
+{%enbdblock%}
+
+
+
+
+
+
+---  >>>> IMAGENS
+
+-> pip install pillow
+
+- > no arquivo url colocar: 
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+-> no arquivo settings.py:
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'
+
+-> na pasta contatos, no arquivo models.py na topico class Contato colocar:
+foto = models.ImageField(blank=True, upload_to = 'fotos/%Y/%m/%d')
+
+-> depois disso fazer as migraçoes: 
+python manage.py makemigrations  
+python manage.py migrate
+
+
+
+
+
+
+--->> manipulando manssagens 
+-> no arquivo settings.py colocar:
+from django.contrib.messages import constants
+
+MESSAGE_TAGS = {
+	constants.ERRO:'alert-danger',   //conforme a pagina do bootstrap
+	constants.WARNING: 'alert-warning',
+	constants.DEBUG: 'alert-debug',
+	constants.SUCESS: 'alert-sucess',
+	constants.INFO: 'alert-info'
+}
+
+-> ir no arquivo views.py da pasta contato e colocar:
+from django.contrib import messages
+//no topico def index
+messages.add_message(request, messages.ERROR, 'Ocorreu um erro')
+
+-> no arquivo base.html da pasta templates abaixo da tag <input class='form-control'>
+{% if messages %}
+	{% for mensagem in messages %}
+		<div class="alert {{ message.tags }}"  role="alert">
+			{{ mensagem }}
+		</div> 
+	{% endfor %}
+{% endif %}
+
+-> no arquivo views.py colocar
+redirect no from django.shortcuts
+//no topico def buscar no if termo is None 
+messages.add_message(request, messages.ERRO, 'campo termo nao pode ficar vazio') return redirect('index')

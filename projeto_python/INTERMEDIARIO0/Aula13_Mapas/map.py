@@ -1,0 +1,47 @@
+produtos = [
+    {'nome' : 'p1', 'preco' : 13.47},
+    {'nome' : 'p2', 'preco' : 34.66},
+    {'nome': 'p3', 'preco': 55.55},
+    {'nome': 'p4', 'preco': 124.55},
+    {'nome': 'p5', 'preco': 1.97},
+    {'nome': 'p6', 'preco': 0.90},
+    {'nome': 'p7', 'preco': 10.01},
+    {'nome': 'p8', 'preco': 13.67},
+    {'nome': 'p9', 'preco': 14.48},
+    {'nome': 'p10', 'preco': 197.35},
+    {'nome': 'p11', 'preco': 34.54},
+    {'nome': 'p12', 'preco': 112.45},
+    {'nome': 'p13', 'preco': 4.45},
+    {'nome': 'p14', 'preco': 3.45},
+    {'nome': 'p15', 'preco': 45.42},
+    {'nome': 'p16', 'preco': 44.33},
+    {'nome': 'p17', 'preco': 42.77},
+]
+
+pessoas = [
+    {'nome' : 'luiz', 'idade' : 34},
+    {'nome': 'luiz', 'idade': 14},
+    {'nome': 'luiz', 'idade': 24},
+    {'nome': 'luiz', 'idade': 4},
+    {'nome': 'luiz', 'idade': 0.34},
+    {'nome': 'luiz', 'idade': 21},
+    {'nome': 'luiz', 'idade': 9},
+    {'nome': 'luiz', 'idade': 7},
+    {'nome': 'falcao', 'idade': 54},
+    {'nome': 'edu', 'idade': 44},
+    {'nome': 'mary', 'idade': 14},
+    {'nome': 'jo', 'idade': 424},
+    {'nome': 'lu', 'idade': 33},
+    {'nome': 'luzz', 'idade': 88},
+    {'nome': 'diniz', 'idade': 67},
+    {'nome': 'max', 'idade': 46},
+    {'nome': 'tatu', 'idade': 64},
+    {'nome': 'luiz', 'idade': 77},
+    {'nome': 'falo', 'idade': 89},
+    {'nome': 'err', 'idade': 56},
+    {'nome': 'chupa', 'idade': 33},
+    {'nome': 'hahah', 'idade': 34},
+]
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+
