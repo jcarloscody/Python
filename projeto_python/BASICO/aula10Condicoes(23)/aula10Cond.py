@@ -28,8 +28,8 @@ elif (m == 0):
      print (f'First note was: {n1} \ nYour second note was: {n2} ')
      print (f'dear student {studant} your average was {m} ')
 
-a = ''
-if not a:  #senão é verdadeiro
+a = 'dd'
+if not a:  #se não é verdadeiro
     print('preencha o valor')
 
 nome = 'josue'

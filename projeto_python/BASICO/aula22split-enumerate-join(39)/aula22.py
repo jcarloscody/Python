@@ -3,7 +3,7 @@
 string = 'O Brasil é o o, o o país, da bola,o Brasil é penta na bola .'
 
 lista1 = string.split(' ') # faz separação entre as palavras criando uma lista a partir de uma str
-#print(lista1)
+print(lista1)
 lista2 = string.split(',')
 print(lista2)
 """print(lista1)

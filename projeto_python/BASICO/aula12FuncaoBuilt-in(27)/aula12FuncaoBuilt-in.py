@@ -4,23 +4,22 @@
 #  ou não fazer
 # algo. verificar se o valor '1' é numerico ou não
 # isnumeric, isdigit, isdecimal-> checa apenas se é nº e positivo
-from builtins import int
+
 
 nt= input('digite um valor')
 n2t=input('digite outro')
 
-#if nt.isnumeric() and n2t.isnumeric():  SÓ CHECA NÚMERO E POSITO
- #   nt = int(nt)
-  #  n2t = int(n2t)
-   # print(nt+n2t)
-#else:
- #   print("erro")
+if nt.isnumeric() and n2t.isnumeric():  #SÓ CHECA NÚMERO E POSITO
+    nt = int(nt)
+    n2t = int(n2t)
+    print(nt+n2t)
+else:
+    print("erro")
 
 
 try:
     nt=float(nt)
     n2=float(n2t)
-
     print(nt+n2t)
 except:
     print('erro')

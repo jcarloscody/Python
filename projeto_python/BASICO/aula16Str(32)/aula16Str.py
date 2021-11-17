@@ -17,8 +17,9 @@ print(nome[:])
 
 print(f'quantidade de caracter da variável NOME: {len(nome)}')  #quant de caracter
 
+print(nome)
 print(nome[0:21:2]) #aquie ele vai do início até o fim pulando de dois em dois termoaquo:termoadquem:pulos
-print(nome[0::3]) #aquie ele vai do início até o fim pulando de três em três
+print(nome[0::2]) #aquie ele vai do início até o fim pulando de três em três
 print(nome[::4]) #aquie ele vai do início até o fim pulando de quatro em quatro
 
 

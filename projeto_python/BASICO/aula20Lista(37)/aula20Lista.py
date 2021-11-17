@@ -24,7 +24,7 @@ l1.extend(l2) #estende os valores do l1
 print(f'extendendo a lista 1: {l1}')
 
 l1.extend("josue")
-
+print(f'extendendo a lista 1: {l1}')
 l2.append(10) #inseri mais um item ao final
 print(f'add mais um item a lista 2  no final : {l2}')
 
