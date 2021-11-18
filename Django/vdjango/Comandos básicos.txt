@@ -4,19 +4,19 @@
 pip install django==2.3  //se quiser instalar uma versao específica
 
 
-- > django-admin startproject  nome_do_projeto .      //o comando cria um projeto django. o . serviu para criar apenas uma pasta do projeto OU
+- > django-admin startproject  nome_do_projeto .      //o comando cria um projeto django. o . serviu para criar apenas uma pasta do projeto, pq senão ele cria uma pasta depois outra pasta ficando ao final 3 niveis OU
 django-admin startproject  nome_do_projeto 
 
 
 /*
-_init_py      >  diz que é um pacote python, vc já sabe
+_init_py      >  simplesmente diz que é o diretorio é um pacote python
 settings.py   >  arquivo mais importante, pois tem todas as informações do projeto
 urls.py       >  
-wsgi.py       >  web server interface, é realacionado com servidor web.
-manage.py     >  
+wsgi.py       >  web server interface, é relacionado com servidor web.
+manage.py     >  é como se fosse o main
 */
 
-//trabalhamos com apps no djangos, os apps não são aplicativos literalmente, são como sessões 
+//trabalhamos com APPs no djangos, os apps são fraçoes de nossa aplicacao, são sessoes
 
 
 - > python manage.py runserver     //ligar o localserver
@@ -25,16 +25,18 @@ ctrl+c sai
 
 
 
-- > python manage.py startapp  nome_apps    //cria um apps
-/*
+- > python manage.py startapp  nome_app   //cria um APP
+
 admin.py  > registra a área administrativa do apps, ou seja, da sessão criada.
-apps.py   > deveria ser chamado de config para melhor entendimento, porém aqui se registra o nome do apps
-models.py > trabalha com a base de dados
+apps.py   > deveria ser chamado de config para melhor entendimento, porém aqui se registra o nome do app
+models.py > trabalha com a base de dados.
 tests.py  > para testes automatizados
 views.py  >
-*/
+migrations  >  relacionado com base de dados. quando estivermos trabalhando com o models.py e criarmos/moficarmos alguma coisa, a gente vai
+mandar ele criar essas migrations e serão criadas aqui dentro e daí vai sincronizar com o codigo
 
-/*
+
+
 . ir na pasta nome_do_projeto -> ir no arquivo settings.py e registrar no installed_apps 'nome_apps.apps.nome_appsConfig', -> ir no arquivo urls.py  na lista urlpatterns e registrar path('nome_apps/', include('nome_apps.urls')), 
 . no arquivo urls.py da pasta nome_do_projeto colocar:  from django.urls import path, include
 . dentro da pasta nome_apps cria o arquivo urls.py

@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b457e1e6-2525-4086-96d4-6cb2e29fe544" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projeto_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projeto_python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BASICO/aula10Condicoes(23)/aula10Cond.py" beforeDir="false" afterPath="$PROJECT_DIR$/BASICO/aula10Condicoes(23)/aula10Cond.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BASICO/aula12FuncaoBuilt-in(27)/aula12FuncaoBuilt-in.py" beforeDir="false" afterPath="$PROJECT_DIR$/BASICO/aula12FuncaoBuilt-in(27)/aula12FuncaoBuilt-in.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BASICO/aula16Str(32)/aula16Str.py" beforeDir="false" afterPath="$PROJECT_DIR$/BASICO/aula16Str(32)/aula16Str.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BASICO/aula20Lista(37)/aula20Lista.py" beforeDir="false" afterPath="$PROJECT_DIR$/BASICO/aula20Lista(37)/aula20Lista.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BASICO/aula22split-enumerate-join(39)/aula22.py" beforeDir="false" afterPath="$PROJECT_DIR$/BASICO/aula22split-enumerate-join(39)/aula22.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nomeqq.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook para upload.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
