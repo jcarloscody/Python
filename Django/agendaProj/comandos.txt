@@ -2,3 +2,6 @@ manage.py makemigrations    FAZER NOVAS MIGRACOES
 python manage.py migrate   toda vez que fizer modificacao no model
 
 python manage.py createsuperuser    cria o user para odmin
+
+
+pip install pillow
