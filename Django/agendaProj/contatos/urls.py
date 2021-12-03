@@ -1,5 +1,6 @@
 from django.urls import  path
 from . import views
+#from Pillow import  DJ
 
 urlpatterns = [
     path("", views.index, name='index'),

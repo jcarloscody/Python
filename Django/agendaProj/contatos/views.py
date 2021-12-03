@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import Http404
 from django.template import  TemplateSyntaxError
 from django.core.paginator import Paginator
 from django.db.models import Q, Value
 from django.db.models.functions import  Concat
+from django.contrib import messages
 
 from . import  models
 
@@ -11,6 +12,8 @@ from . import  models
 
 
 def index(req):
+
+
     #contatos = models.Contato.objects.all()
     contatos = models.Contato.objects.order_by('id').filter(
         mostrar=True
@@ -43,6 +46,10 @@ def ver_contato(req, id):
 
 def busca (req):
     termo = req.GET.get('termo')
+
+    if termo is None or not termo:
+        messages.add_message(req, messages.ERROR, 'o campo deve ser preenchido')
+        return redirect('index')
 
     campos = Concat('nome', Value(' '), 'sobrenome')
 
