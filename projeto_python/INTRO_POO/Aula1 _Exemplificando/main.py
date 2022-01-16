@@ -14,3 +14,4 @@ p1.falar('poo')
 p1.falar('poo')
 p1.parar_falar()
 
+p2 = Pessoa("carllos",23,True,True)
